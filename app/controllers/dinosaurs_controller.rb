@@ -9,6 +9,8 @@ class DinosaursController < ApplicationController
         dinosaur = Dinosaur.create(dinosaur_params)
         if dinosaur.valid?
             render json: dinosaur
+        else
+            render json: dinosaur.errors, status: 422    
         end
     end
 
@@ -17,6 +19,8 @@ class DinosaursController < ApplicationController
         dinosaur.update(dinosaur_params)
         if dinosaur.valid?
             render json: dinosaur
+        else
+            render json: dinosaur.errors, status: 422    
         end
     end
 
