@@ -164,18 +164,7 @@ RSpec.describe Dinosaur, type: :model do
         image: 'https://static.wikia.nocookie.net/jurassicpark/images/5/52/Jurassic_world_fallen_kingdom_triceratops_by_sonichedgehog2-dc9dwcu.png/revision/latest?cb=20180427200649')
 
         expect(dino.errors[:image]).to be_empty
-        expect(dino.errors[:image]).to_not include "has already been taken" 
+        expect(dino.errors[:image]).to_not include "has already been taken"  
     end
 
 end
-
-
-
-
-# {
-#     name: 'Triceratops',
-#     age: 69000000,
-#     diet: 'Herbavore(Vegan)',
-#     enjoys: 'Enjoys long walks in the rainforest and using its large skull to make a path.',
-#     image: 'https://static.wikia.nocookie.net/jurassicpark/images/5/52/Jurassic_world_fallen_kingdom_triceratops_by_sonichedgehog2-dc9dwcu.png/revision/latest?cb=20180427200649'
-# },
